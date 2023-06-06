@@ -86,6 +86,33 @@ kubectl config current-context
 ```
 My output: shubham@kubernetes-github-actions-shubham-test.ap-south-1.eksctl.io
 
+3. The configuration of kubectl is done by a YAML file. On our local machine, the configuration file is located here:
+
+```
+cat $HOME/.kube/config
+```
+
+4. Run the below command through this command, the certificate is hidden : DATA+OMITTED. Also note that this configuration file can contain the accesses of multiple clusters.
+
+```
+kubectl config view
+```
+
+5. As we do not want to use our root administrator accesses but that of the user we just created, we need to remove AWS_STS_REGIONAL_ENDPOINTS and AWS_PROFILE variables. All of these steps can be done with the following command:
+
+```
+# create kubectl EKS configuration
+$ make cluster-create-config
+```
+This command creates the kubeconfig.yaml configuration file. It also creates a KUBECONFIG file which is the same file, encoded in base64.
+![image](https://github.com/Shubhammadgical/Kubernetes-EKS-Github-Actions/assets/101810595/6615e7fb-c048-4759-b1d7-f3ec472c8d22)
+
+6. We now need to modify our cluster so that this new user can administer it. So for seeing the current state of our configuration run the below command:
+
+```
+kubectl -n kube-system get configmap aws-auth -o yaml
+```
+
 
 
 
