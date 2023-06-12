@@ -69,7 +69,7 @@ $ make test
 ![image](https://github.com/Shubhammadgical/Kubernetes-EKS-Github-Actions/assets/101810595/68cf7e75-15c3-4d8e-b290-693f18e88b95)
 
 # Creating the cluster and setting up the configuration file
-Step by step user guid [video]().
+Step by step user guid [video](https://drive.google.com/file/d/1Z0jYnAbTbeaO02MwGaYszh_SberZnwgu/view?usp=sharing).
 
 1. For creating the EKS cluster riun the below command:
 
