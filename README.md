@@ -20,8 +20,10 @@ So, in this project I will show you the follow points:
 
 # Prerequisites
   - jq and wget must be installed.
+  - KUBECTL Version must be "v1.23.6"
 
 # Install, setup and explore the project
+Step by step user guid [video]().
 
 1. Run the below command to clone this repo:
 
@@ -67,6 +69,7 @@ $ make test
 ![image](https://github.com/Shubhammadgical/Kubernetes-EKS-Github-Actions/assets/101810595/68cf7e75-15c3-4d8e-b290-693f18e88b95)
 
 # Creating the cluster and setting up the configuration file
+Step by step user guid [video]().
 
 1. For creating the EKS cluster riun the below command:
 
@@ -104,15 +107,26 @@ kubectl config view
 # create kubectl EKS configuration
 $ make cluster-create-config
 ```
-This command creates the kubeconfig.yaml configuration file. It also creates a KUBECONFIG file which is the same file, encoded in base64.
-![image](https://github.com/Shubhammadgical/Kubernetes-EKS-Github-Actions/assets/101810595/6615e7fb-c048-4759-b1d7-f3ec472c8d22)
+This command creates the kubeconfig.yaml configuration file and aws-auth-configmap.yaml file. It also creates a KUBECONFIG file which is the same file, encoded in base64.
+![image](https://github.com/Shubhammadgical/Kubernetes-EKS-Github-Actions/assets/101810595/893c8a9d-ab8f-4e6b-9761-31afde76022d)
 
 6. We now need to modify our cluster so that this new user can administer it. So for seeing the current state of our configuration run the below command:
 
 ```
 kubectl -n kube-system get configmap aws-auth -o yaml
 ```
+7. Copy the "mapUsers" field from the output of 5th step command and past it in aws-auth-configmap.yaml file same as like shown below:
 
+![image](https://github.com/Shubhammadgical/Kubernetes-EKS-Github-Actions/assets/101810595/04cef667-b75b-41f4-a530-5ccbeaf599e4)
 
+8. Apply the modified file to the cluster by running this command:
 
+```
+# apply kubectl EKS configuration
+$ make cluster-apply-config
+```
+![image](https://github.com/Shubhammadgical/Kubernetes-EKS-Github-Actions/assets/101810595/455aad0f-b9a2-4102-ad2e-67ceac82ccc3)
 
+# Reference
+
+I got information from this [article](https://medium.com/@jerome.decoster/kubernetes-eks-github-actions-a874321fb9b4).
