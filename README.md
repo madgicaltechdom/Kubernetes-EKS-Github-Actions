@@ -23,7 +23,7 @@ So, in this project I will show you the follow points:
   - KUBECTL Version must be "v1.23.6"
 
 # Install, setup and explore the project
-Step by step user guid [video]().
+Step by step user guid [video](https://drive.google.com/file/d/1W7lyXr4p1Mr3JwXX40kw9NmxCA1vNa69/view?usp=sharing).
 
 1. Run the below command to clone this repo:
 
