@@ -179,19 +179,11 @@ By using this URL in our browser we can see our website:
 A docker image has been pushed to our repository:
 ![image](https://github.com/Shubhammadgical/Kubernetes-EKS-Github-Actions/assets/101810595/5dec5481-ae01-4ada-aafb-d37dce12bc0b)
 
-8. For testing whether our workflow is working fine or not we make the changes in the site/views/index.njk file.
+8. For testing whether our workflow is working fine or not we will add an error by deactivating a route in the app.js file:
 
-![image](https://github.com/Shubhammadgical/Kubernetes-EKS-Github-Actions/assets/101810595/c4805878-9ff1-431f-8a48-05dc1f9fc5b3)
+![image](https://github.com/Shubhammadgical/Kubernetes-EKS-Github-Actions/assets/101810595/05893e84-17c0-49a6-b86b-f47669d53596)
 
-9. We modify the package.json file:
-
-![image](https://github.com/Shubhammadgical/Kubernetes-EKS-Github-Actions/assets/101810595/d0f5a3ab-b100-4ad6-ac2b-1c219b668ac7)
-
-10. We will add an error by deactivating a route in the app.js file:
-
-![image](https://github.com/Shubhammadgical/Kubernetes-EKS-Github-Actions/assets/101810595/5c993154-a6ae-4cf8-9c51-d59c589ba6ba)
-
-11. Then we push the code:
+9. Then we push the code:
 
 ```
 git add .
@@ -199,9 +191,17 @@ git commit -m :boom:
 git push
 ```
 
-12. The process is interrupted by the error:
+10. The process is interrupted by the error:
 
+![image](https://github.com/Shubhammadgical/Kubernetes-EKS-Github-Actions/assets/101810595/8e32d7ed-a95c-4a70-8d4d-991fdc2cb4d6)
 
+11. We edit the app.js file again to remove the error and again push the code:
+
+![image](https://github.com/Shubhammadgical/Kubernetes-EKS-Github-Actions/assets/101810595/d9196dc1-08f8-4665-85b9-15f933c15555)
+
+12. By reloading our browser, we see that our site is working properly:
+
+![image](https://github.com/Shubhammadgical/Kubernetes-EKS-Github-Actions/assets/101810595/a917e760-360e-41f7-b9ca-a59b5e84b6f3)
 
 # Reference
 
