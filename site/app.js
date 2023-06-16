@@ -18,7 +18,7 @@ app.get('/', async (req, res) => {
 })
 
 app.get('/healthcheck', (req, res) => {
-    res.json({ uptime: process.uptime() })
+    throw new Error('Intentional error for testing')
 })
 
 module.exports = app
