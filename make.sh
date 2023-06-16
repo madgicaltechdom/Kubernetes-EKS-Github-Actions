@@ -2,7 +2,7 @@
 
 # AWS variables
 AWS_PROFILE=default
-AWS_REGION=ap-south-1
+AWS_REGION=us-east-2
 # project variables
 PROJECT_NAME=kubernetes-github-actions-shubham-test
 WEBSITE_PORT=3000

@@ -3,14 +3,14 @@ name: cd
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     branches:
-      - master
+      - main
 
 env: 
-  AWS_REGION: eu-west-3
-  ECR_REPOSITORY: kubernetes-github-actions
+  AWS_REGION: us-east-2
+  ECR_REPOSITORY: kubernetes-github-actions-shubham-test
   SHORT_SHA: $(echo ${{ github.sha }} | cut -c 1-8)
 
 jobs:
