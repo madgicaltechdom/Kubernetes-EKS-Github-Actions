@@ -115,7 +115,7 @@ This command creates the kubeconfig.yaml configuration file and aws-auth-configm
 ```
 kubectl -n kube-system get configmap aws-auth -o yaml
 ```
-7. Copy the "mapUsers" field from the output of 5th step command and past it in aws-auth-configmap.yaml file same as like shown below:
+7. Copy the "mapUsers" field from the output of 5th step command and past it in aws-auth-configmap.yaml file same as shown below:
 
 ![image](https://github.com/Shubhammadgical/Kubernetes-EKS-Github-Actions/assets/101810595/04cef667-b75b-41f4-a530-5ccbeaf599e4)
 
@@ -128,6 +128,8 @@ make cluster-apply-config
 ![image](https://github.com/Shubhammadgical/Kubernetes-EKS-Github-Actions/assets/101810595/455aad0f-b9a2-4102-ad2e-67ceac82ccc3)
 
 # Deployment with GitHub actions
+
+The video is given in the reference.
 
 1. Make the changes in the .github/workflows/cd.yml file like AWS_REGION and ECR_REPOSITORY.
 
@@ -203,6 +205,12 @@ git push
 
 ![image](https://github.com/Shubhammadgical/Kubernetes-EKS-Github-Actions/assets/101810595/a917e760-360e-41f7-b9ca-a59b5e84b6f3)
 
+13. We can delete our cluster with this command:
+
+```
+make cluster-delete
+```
+
 # Reference
 
-I got information from this [article](https://medium.com/@jerome.decoster/kubernetes-eks-github-actions-a874321fb9b4).
+I got information from this [article](https://medium.com/@jerome.decoster/kubernetes-eks-github-actions-a874321fb9b4). This is the step-by-step user guide [video](https://drive.google.com/file/d/1FtUGLTKm_EMbYgahOgbjN6fQiLmq-fNR/view?usp=sharing).
