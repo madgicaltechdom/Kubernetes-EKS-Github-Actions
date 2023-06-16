@@ -77,7 +77,7 @@ Step-by-step user guide [video](https://drive.google.com/file/d/1Z0jYnAbTbeaO02M
 make cluster-create
 ```
 We launch the creation of the EKS cluster. You have to be patient because it takes about 15 minutes!
-![image](https://github.com/Shubhammadgical/Kubernetes-EKS-Github-Actions/assets/101810595/872db31b-8efe-496a-bd2f-745cd6824fb4)
+![image](https://github.com/Shubhammadgical/Kubernetes-EKS-Github-Actions/assets/101810595/fc61c383-fbea-4f0f-ac6f-9ad4987594ac)
 
 The cluster is created:
 ![image](https://github.com/Shubhammadgical/Kubernetes-EKS-Github-Actions/assets/101810595/2028a622-3da3-4f26-968f-77fbd97049be)
@@ -210,6 +210,7 @@ git push
 ```
 make cluster-delete
 ```
+![image](https://github.com/Shubhammadgical/Kubernetes-EKS-Github-Actions/assets/101810595/493ba199-7b88-48ec-bb02-fb261f6b3c2e)
 
 # Reference
 
