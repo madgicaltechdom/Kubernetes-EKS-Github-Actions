@@ -8,7 +8,7 @@ The main goal of this project is:
   - Put the application online with GitHub Actions, kubetctl, and kustomize
   - Each git push should automatically update the Kubernetes cluster if the tests pass
 
-![image](https://github.com/Shubhammadgical/Kubernetes-EKS-Github-Actions/assets/101810595/5e0be5b8-bd2f-4a07-826b-b4b82250391d)
+![image](https://github.com/madgicaltechdom/Kubernetes-EKS-Github-Actions/assets/101810595/8d99a9e7-68c9-4695-8783-a5fb025b27d3)
 
 So, in this project, I will show you the following points:
 
