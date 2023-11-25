@@ -28,7 +28,7 @@ Step-by-step user guide [video](https://drive.google.com/file/d/1W7lyXr4p1Mr3JwX
 1. Run the below command to clone this repo:
 
 ```
-git clone https://github.com/Shubhammadgical/Kubernetes-EKS-Github-Actions.git
+git clone https://github.com/madgicaltechdom/Kubernetes-EKS-Github-Actions.git
 ```
 2. Provide the AWS_REGION where you want to create these things in line no. 5 in the make.sh file.
 
@@ -40,7 +40,7 @@ git clone https://github.com/Shubhammadgical/Kubernetes-EKS-Github-Actions.git
 # install eksctl + kubectl + yq, create aws user + ecr repository
 make setup
 ```
-5. The above command will Install eksctl if it is not already installed, Install kubectl if it is not already installed, Install yq if it is not already installed, Creates an AWS Power User for the project, Creates an ECR repository, and Creates an .env file from the .env.tmpl file.
+5. The above command will Install eksctl if it is not already installed, Install kubectl if it is not already installed, Install yq if it is not already installed, Create an AWS Power User for the project, Creates an ECR repository, and Creates an .env file from the .env.tmpl file.
 
 The user is created:
 ![image](https://github.com/Shubhammadgical/Kubernetes-EKS-Github-Actions/assets/101810595/30f8b453-bb0d-4c27-a184-64500ae7879f)
@@ -76,7 +76,7 @@ Step-by-step user guide [video](https://drive.google.com/file/d/1Z0jYnAbTbeaO02M
 ```
 make cluster-create
 ```
-We launch the creation of the EKS cluster. You have to be patient because it takes about 15 minutes!
+We launched the creation of the EKS cluster. You have to be patient because it takes about 15 minutes!
 ![image](https://github.com/Shubhammadgical/Kubernetes-EKS-Github-Actions/assets/101810595/fc61c383-fbea-4f0f-ac6f-9ad4987594ac)
 
 The cluster is created:
@@ -110,12 +110,12 @@ make cluster-create-config
 This command creates the kubeconfig.yaml configuration file and aws-auth-configmap.yaml file. It also creates a KUBECONFIG file which is the same file, encoded in base64.
 ![image](https://github.com/Shubhammadgical/Kubernetes-EKS-Github-Actions/assets/101810595/893c8a9d-ab8f-4e6b-9761-31afde76022d)
 
-6. We now need to modify our cluster so that this new user can administer it. So for seeing the current state of our configuration run the below command:
+6. We now need to modify our cluster so that this new user can administer it. So to see the current state of our configuration run the below command:
 
 ```
 kubectl -n kube-system get configmap aws-auth -o yaml
 ```
-7. Copy the "mapUsers" field from the output of 5th step command and past it in aws-auth-configmap.yaml file same as shown below:
+7. Copy the "mapUsers" field from the output of the 5th step command and paste it into aws-auth-configmap.yaml file same as shown below:
 
 ![image](https://github.com/Shubhammadgical/Kubernetes-EKS-Github-Actions/assets/101810595/04cef667-b75b-41f4-a530-5ccbeaf599e4)
 
